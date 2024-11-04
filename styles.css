@@ -63,28 +63,29 @@ canvas {
 /* Footer styling */
 footer {
     background-color: #333;
-    padding: 20px;
+    padding: 30px; /* Increase padding for a larger footer */
     text-align: center;
     color: #f9f9f9;
     font-family: Arial, sans-serif;
 }
 
-/* Footer links container styling */
+/* Style for the footer links container */
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px; /* Increase gap for more spacing between icons */
 }
 
-/* Individual footer link styling */
+/* Individual footer links */
 .footer-link {
     color: #f9f9f9;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2em; /* Make icons larger */
     transition: color 0.3s;
+    padding: 10px; /* Add padding around each icon */
 }
 
 /* Icon and hover effect */
 .footer-link:hover {
-    color: #1da1f2;
+    color: #1da1f2; /* Twitter blue effect */
 }

@@ -1,4 +1,4 @@
-canvas = document.getElementById('Baloons Canvas');
+canvas = document.getElementById('backgroundCanvas');
 ctx = canvas.getContext('2d');
  
 

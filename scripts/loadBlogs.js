@@ -1,28 +1,49 @@
 async function loadBlogList() {
     const blogContainer = document.getElementById("blog-container");
     const blogs = [
-        { title: "Experiments, Execution, and Driving Business Operations in the Age of GenAI", file: "power_of_iteration.md" },
-        { title: "Product Management for Platform Products: Crafting a Two-Layer PRD", file: "platform_prds.md" }
-    ]; // Add more blog entries here as needed
+        { title: "Experiments, Execution, and Driving Business Operations in the Age of GenAI", file: "power_of_iteration.md", year: 2024 },
+        { title: "Product Management for Platform Products: Crafting a Two-Layer PRD", file: "platform_prds.md", year: 2024 },
+        { title: "Doing No Harm: The Imperative for an AI Practitioner’s Ethical Code", file: "do_no_harm.md", year: 2024 }, 
+        { title: "The Art of Assistance: LLM vs ADAS", file: "art_of_assistance.md", year: 2023 }
+    ]; // Add more blog entries as needed
 
-    // Create a list element to contain blog links
-    const blogList = document.createElement("ul");
-    blogList.classList.add("blog-list");
+     // Group blogs by year
+     const blogsByYear = blogs.reduce((acc, blog) => {
+        acc[blog.year] = acc[blog.year] || [];
+        acc[blog.year].push(blog);
+        return acc;
+    }, {});
 
-    blogs.forEach(blog => {
-        const blogLink = document.createElement("a");
-        blogLink.href = `blog.html?file=${blog.file}`; // Links to blog.html with file as query parameter
-        blogLink.textContent = blog.title;
-        blogLink.classList.add("blog-link");
+    // Create and append the grouped blog list to the container
+    Object.keys(blogsByYear).sort((a, b) => b - a).forEach(year => {
+        // Create year subheader
+        const yearHeader = document.createElement("h2");
+        yearHeader.textContent = year;
+        yearHeader.classList.add("year-header");
+        blogContainer.appendChild(yearHeader);
 
-        const listItem = document.createElement("li");
-        listItem.appendChild(blogLink);
+        // Create list of blogs for each year
+        const blogList = document.createElement("ul");
+        blogList.classList.add("blog-list");
 
-        blogList.appendChild(listItem);
+        blogsByYear[year].forEach(blog => {
+            // Create link for each blog post
+            const blogLink = document.createElement("a");
+            blogLink.href = `blog.html?file=${blog.file}`;
+            blogLink.classList.add("blog-link");
+
+            const title = document.createElement("h3");
+            title.textContent = blog.title;
+            blogLink.appendChild(title);
+
+            const listItem = document.createElement("li");
+            listItem.appendChild(blogLink);
+            blogList.appendChild(listItem);
+        });
+
+        // Append the list of blogs under the year header
+        blogContainer.appendChild(blogList);
     });
-
-    blogContainer.appendChild(blogList);
 }
 
-// Load the blog list on page load
 document.addEventListener("DOMContentLoaded", loadBlogList);

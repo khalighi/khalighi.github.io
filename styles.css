@@ -13,6 +13,30 @@ body {
     min-height: 100vh;
 }
 
+/* Background canvas styling */
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Ensures canvas stays behind other content */
+}
+
+/* Paragraph styling with shadows for main.html */
+.main-page p {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Header styling */
 header {
     background-color: blue;
@@ -26,7 +50,7 @@ header {
 /* Header title styling */
 header h1 {
     margin: 0;
-    font-size: 1.6em; /* Reduced font size */
+    font-size: 1.6em;
     text-align: left;
 }
 
@@ -40,7 +64,7 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
-    font-size: 0.9em; /* Reduced font size */
+    font-size: 0.9em;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 5px;
@@ -64,32 +88,12 @@ p, h2 {
     text-align: left;
 }
 
-p {
-    padding: 20px;
-    font-size: 1em; /* Reduced font size */
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
-    font-size: 1.5em; /* Reduced font size */
+    font-size: 1.5em;
     line-height: 1.4;
     margin: 20px 0;
     color: #333;
     font-weight: bold;
-}
-
-/* Canvas styling */
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
 }
 
 /* Footer styling */
@@ -113,7 +117,7 @@ footer {
 .footer-link {
     color: #f9f9f9;
     text-decoration: none;
-    font-size: 1.3em; /* Slightly reduced font size */
+    font-size: 1.3em;
     transition: color 0.3s;
     padding: 10px;
 }
@@ -130,6 +134,15 @@ footer {
     text-align: left;
 }
 
+/* Year header styling */
+.year-header {
+    font-size: 1.8em;
+    color: #1d4dab;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 /* Blog list container */
 #blog-container {
     max-width: 800px;
@@ -141,16 +154,16 @@ footer {
 .blog-list {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 /* Individual blog link styling */
 .blog-list li {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .blog-link {
-    font-size: 1em; /* Reduced font size */
+    font-size: 1.1em;
     color: #333;
     text-decoration: none;
     padding: 10px 15px;
@@ -169,7 +182,6 @@ footer {
     margin: 0;
     font-weight: bold;
     text-align: left;
-    font-size: 1.2em; /* Reduced font size */
 }
 
 /* Blog content styling */
@@ -182,12 +194,12 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     color: #333;
     line-height: 1.6;
-    font-size: 1em; /* Reduced font size */
+    font-size: 1em;
     text-align: left;
 }
 
 #blog-content h1 {
-    font-size: 2em; /* Reduced font size */
+    font-size: 2em;
     color: #1d4dab;
     margin-top: 0;
     margin-bottom: 20px;
@@ -202,9 +214,9 @@ footer {
     font-weight: bold;
 }
 
-#blog-content h2 { font-size: 1.6em; } /* Reduced font size */
-#blog-content h3 { font-size: 1.4em; } /* Reduced font size */
-#blog-content h4 { font-size: 1.2em; } /* Reduced font size */
+#blog-content h2 { font-size: 1.6em; }
+#blog-content h3 { font-size: 1.4em; }
+#blog-content h4 { font-size: 1.2em; }
 
 #blog-content p {
     margin: 15px 0;

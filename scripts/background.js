@@ -1,6 +1,4 @@
-console.log("debugging log");
-
-canvas = document.getElementById('my canvas');
+canvas = document.getElementById('Baloons Canvas');
 ctx = canvas.getContext('2d');
  
 

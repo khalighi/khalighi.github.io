@@ -1,6 +1,7 @@
 async function loadBlogList() {
     const blogContainer = document.getElementById("blog-container");
     const blogs = [
+        { title: " The Age of Foundation Models: Navigating the Future of Work and Creativity", file: "future_is_creative.md", year: 2024 },
         { title: "Experiments, Execution, and Driving Business Operations in the Age of GenAI", file: "power_of_iteration.md", year: 2024 },
         { title: "Product Management for Platform Products: Crafting a Two-Layer PRD", file: "platform_prds.md", year: 2024 },
         { title: "Doing No Harm: The Imperative for an AI Practitioner’s Ethical Code", file: "do_no_harm.md", year: 2024 }, 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bumperstickers - Yaser Khalighi</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Showdown.js for converting Markdown to HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+</head>
+<body class="bumperstickers-page">
+    <header>
+        <h1>Bumperstickers</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="bumperstickers.html">Bumperstickers</a>
+            <a href="blogs.html">Blogs</a>
+        </nav>
+    </header>
+
+    <section id="quotes-container">
+        <!-- Quotes will be loaded here -->
+    </section>
+
+    <script>
+        // Function to load and convert markdown content
+        async function loadQuotes() {
+            try {
+                const response = await fetch('content/quotes.md');
+                const markdownContent = await response.text();
+                
+                // Initialize showdown
+                const converter = new showdown.Converter();
+                
+                // Convert markdown to HTML
+                const htmlContent = converter.makeHtml(markdownContent);
+                
+                // Insert the HTML content
+                document.getElementById('quotes-container').innerHTML = htmlContent;
+            } catch (error) {
+                console.error('Error loading quotes:', error);
+                document.getElementById('quotes-container').innerHTML = '<p>Error loading quotes. Please try again later.</p>';
+            }
+        }
+
+        // Load quotes when page loads
+        window.addEventListener('load', loadQuotes);
+    </script>
+
+    <!-- Footer placeholder -->
+    <footer id="footer"></footer>
+    
+    <!-- Load Footer Script -->
+    <script src="scripts/loadFooter.js"></script>
+</body>
+</html> 

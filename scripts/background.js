@@ -1,5 +1,5 @@
-canvas = document.getElementById('backgroundCanvas');
-ctx = canvas.getContext('2d');
+const canvas = document.getElementById('backgroundCanvas');
+const ctx = canvas.getContext('2d');
  
 
 class Circles {
@@ -43,7 +43,7 @@ function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     if (!circles) {
-        circles = new Circles(max_radius=20, num_circles=200, window=canvas.width * 2, height=canvas.height * 2)
+        circles = new Circles(20, 200, canvas.width * 2, canvas.height * 2);
     }
     circles.draw(ctx)
 }

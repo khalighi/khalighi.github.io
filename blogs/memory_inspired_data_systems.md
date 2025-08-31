@@ -9,7 +9,7 @@ The way we store, move, and consume data today was never designed for physical A
 Human memory offers a different perspective. We do not store every pixel from each eye or every vibration in the ear. Instead, we remember **events**—compressed, multimodal, semantically meaningful experiences. These memories are efficient, reconstructive, and adaptable: we can recall details when needed, infer missing context, and retell the same experience differently depending on the audience.  
 
 This analogy suggests a new direction for robotics data infrastructure: **designing data systems that store and transmit meaning rather than raw sensory traces**.  
----
+
 ## From Raw Signals to Representations
 Machine learning provides the building blocks for such systems. Embeddings, autoencoders, and multimodal encoders learn **latent representations** that are:  
 
@@ -23,7 +23,7 @@ If these embeddings became the **first-class unit of storage and transmission**,
 - **Operate directly in latent space** for clustering, retrieval, anomaly detection, or training.  
 - **Reconstruct approximations** for visualization, replay, or debugging.  
 - **Summarize data** semantically, enabling context-rich queries.  
----
+
 ## Blurring Storage, Transfer, and Compute
 Embedding-first design collapses the rigid layers of conventional infrastructure.  
 
@@ -32,7 +32,7 @@ Embedding-first design collapses the rigid layers of conventional infrastructure
 - **At the consumer (transfer → compute)**: The receiver interprets the embeddings—either reconstructing approximations for humans or processing them directly for inference and training.  
 
 Instead of *store → move → compute*, all three operations converge onto a **shared representational substrate**. Crucially, computation is naturally distributed: encoding at the sender, decoding or downstream inference at the receiver.  
----
+
 ## Personalization and Customization
 Latent representations are not tied to a single canonical form. They allow **audience-specific reconstruction and adaptive consumption**.  
 
@@ -42,12 +42,12 @@ Take the example of a cultural festival. Stored as raw video, it can only be rep
 - A condensed timeline optimized for a robotics perception model.  
 
 The same stored event serves multiple audiences, each receiving an interpretation suited to their context. For robotics, this is invaluable: the same logs can be consumed differently by developers, regulators, or fleet learning systems—without duplication or preprocessing pipelines.  
----
+
 ## Multimodal Coherence
 Today’s data lakes treat sensor outputs separately: left and right cameras, LiDAR sweeps, IMU readings, CAN logs. Yet robots, like humans, experience the world as **integrated events**.  
 
 Latent representations naturally fuse modalities into unified “event memories.” Instead of fragmented files, the lake stores compact, multimodal traces of what happened. Retrieval, visualization, and summarization all operate at the level of events, not disjoint sensor channels. This mirrors how humans remember: we recall experiences, not raw streams from each sensory channel.  
----
+
 ## Implications for Data Lakes in Physical AI
 Embedding-centric design does not replace data lakes—it **redefines them**. The next generation of data lakes for robotics and embodied systems could:  
 
@@ -57,7 +57,7 @@ Embedding-centric design does not replace data lakes—it **redefines them**. Th
 - **Summarize** massive logs semantically, supporting queries like “find all near-collision events in fog” rather than low-level searches across sensor files.  
 
 In this vision, the data lake becomes more than a passive repository. It becomes a **memory system for embodied intelligence**—compact, contextual, multimodal, and adaptive.  
----
+
 ## Challenges and Open Questions
 The transition is ambitious, and several challenges remain:  
 
@@ -68,7 +68,7 @@ The transition is ambitious, and several challenges remain:
 - **Efficiency at the edge**: How to encode efficiently on resource-constrained devices while operating in real time.  
 
 Hybrid approaches—storing both raw and latent forms—may be necessary in safety-critical domains, at least during transition.  
----
+
 ## Outlook
 The explosion of multimodal data in robotics and physical AI makes current approaches—storing and transmitting raw signals—unsustainable. Embedding-centric systems represent a new paradigm: **storage, transfer, and compute collapse into a single representational substrate**.  
 

@@ -1,6 +1,7 @@
 async function loadBlogList() {
     const blogContainer = document.getElementById("blog-container");
     const blogs = [
+        { title: "My Software Engineer Friend, You Should Join a Startup", file: "my_software_engineer_friend_you_should_join_a_startup.md", year: 2026 },
         { title: "Memory-Inspired Data Systems for Physical AI", file: "memory_inspired_data_systems.md", year: 2025 },
         { title: " The Age of Foundation Models: Navigating the Future of Work and Creativity", file: "future_is_creative.md", year: 2024 },
         { title: "Experiments, Execution, and Driving Business Operations in the Age of GenAI", file: "power_of_iteration.md", year: 2024 },

@@ -1,6 +1,7 @@
 async function loadBlogList() {
     const blogContainer = document.getElementById("blog-container");
     const blogs = [
+        { title: "Six More Tips for Better Coding With Agents (March 2026 Edition)", file: "six_more_tips_for_coding_with_agents.md", year: 2026 },
         { title: "The Inflection Point", file: "the_inflection_point.md", year: 2026 },
         { title: "My Software Engineer Friend, You Should Join a Startup", file: "my_software_engineer_friend_you_should_join_a_startup.md", year: 2026 },
         { title: "Memory-Inspired Data Systems for Physical AI", file: "memory_inspired_data_systems.md", year: 2025 },

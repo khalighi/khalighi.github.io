@@ -1,5 +1,7 @@
 # Six More Tips for Better Coding With Agents (March 2026 Edition)
 
+**Date: Mar 25, 2026**
+
 *This one's for a friend who sent me Steve Yegge's [Six New Tips for Better Coding With Agents](https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9) and proudly declared it fresh and relevant. That article was published in December 2025. It's now March 2026. In AI time, that's roughly three geological epochs. The advice still holds — go read it — but a lot has happened since.*
 
 -----
